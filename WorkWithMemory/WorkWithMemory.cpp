@@ -25,7 +25,9 @@ public:
 #include <iostream>
 
 
-// void pointers need to be casted in c++
+// void pointers need to be casted in c++ to avoid conflicts
+//A void pointer is a pointer that has no associated data type with it.
+//A void pointer can hold address of any type and can be typecasted to any type. 
 
 // this function is not dynamic , which means only copies integers 
 // your task is to change this to be dynamic using template class 
@@ -59,7 +61,10 @@ int main()
     }
 
 
-    //  memmove 
+
+   // memmove() is similar to memcpy() as it also copies data from a source to destination. memmove uses a buffer first then compies the data
+   // memcpy() leads to problems when sourceand destination addresses overlap as memcpy() simply copies data one by one from one location to another.
+   //  memmove 
     std::cout << "memove  -- >>" << std::endl;
     int arr[10] = { 8,3,11,61,-22,7,-6,2,13,47 };
     int* new_arr = &arr[5];
